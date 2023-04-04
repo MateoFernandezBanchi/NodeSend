@@ -11,6 +11,7 @@ exports.nuevoEnlace = async (req, res, next) => {
     enlace.nombre = shortid.generate();
     enlace.nombre_original = nombre_original;
 
+    
     // Si el usuario esta autenticado
     if (req.usuario) {
         const { password, descargas } = req.body;
